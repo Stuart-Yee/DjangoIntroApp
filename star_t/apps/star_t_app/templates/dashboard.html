@@ -8,5 +8,10 @@
     <a href="/logout"/>Logout</a>
     <p>Logged in as {{user.username}}</p>
   <h1>Login success!</h1>
+    {% for joke in jokes %}
+    <p>Joke: {{joke.joke_text}}</p>
+    <p>Punchline: {{joke.punchline}}</p>
+    <p>Submitted by {{joke.user.first_name}}</p>
+    {% endfor %}
 </body>
 </html>
